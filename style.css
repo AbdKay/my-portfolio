@@ -1,0 +1,225 @@
+/* 1. Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 2. Navigation */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 5%;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* 3. Sections */
+.section {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.home-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.home-content p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* About Section */
+.about-section {
+  background: #ffffff;
+}
+
+.about-section h2 {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.about-section p {
+  margin-bottom: 1em;
+}
+
+.about-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.education,
+.contact-brief {
+  flex: 1;
+}
+
+.education h3,
+.contact-brief h3 {
+  margin-bottom: 0.5em;
+}
+
+/* Skills Section */
+.skills-section {
+  background: #f9f9f9;
+}
+
+.skills-languages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.skills-container,
+.languages-container {
+  flex: 1 1 200px;
+}
+
+.skills-container ul,
+.languages-container ul {
+  list-style-type: disc;
+  margin-left: 1.2em;
+}
+
+/* Projects Section */
+.projects-section {
+  background: #fff;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.project-card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1em;
+  background-color: #fff;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5em;
+}
+
+.project-card p,
+.project-card ul {
+  line-height: 1.4;
+  margin-left: 1.2em;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contact-section ul {
+  list-style: none;
+  margin-top: 1em;
+}
+
+.contact-section li {
+  margin-bottom: 0.5em;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+/* 4. Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on mobile; you can implement a hamburger menu if desired */
+  }
+
+  .home-content h1 {
+    font-size: 2em;
+  }
+
+  .skills-languages-wrapper,
+  .about-info {
+    display: block;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
